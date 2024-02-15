@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" async href="../../public/css/bootstrap.css">
+    <script async src="../../public/js/javascript-bundle.js"></script>
+    <title>MFU Board game club</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-danger">
+        <div class="container-fluid">
+            <div id="logo"></div>
+            <a class="navbar-brand ms-2" href="#">MFU Board game club</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto"></ul>
+                <div class="d-flex">
+                    <div class="dropdown">
+                        <button type="button" style="width: 10rem;" class="btn btn-dark dropdown-toggle"
+                            data-bs-toggle="dropdown">
+                            เปลี่ยนหมาก ↻
+                        </button>
+                        <ul class="dropdown-menu bg-dark">
+                            <li><a class="dropdown-item text-white" href="#">หมากรุกไทย</a></li>
+                            <li><a class="dropdown-item text-white" href="#">หมากรุกสากล</a></li>
+                            <li><a class="dropdown-item text-white" href="#">หมากล้อม</a></li>
+                            <li><a class="dropdown-item text-white" href="#">คลอสเวร์ด</a></li>
+                            <li><a class="dropdown-item text-white" href="#">เอแมท</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <div class="container-fluid bg-dark">
+            <!-- Links -->
+            <div class="col-5 ms-2">
+
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-danger" style="width: 7rem;">Guide Book</button>
+                <button type="button" class="btn btn-danger ms-2" style="width: 7rem;">Puzzle+</button>
+            </div>
+        </div>
+    </nav>
+    <div class="container text-white mt-3 pt-2 ps-2 p-2">
+        <div class="col">
+            <div class="row mt-2 bg-dark p-2">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="row mt-2">
+                        <img src="../../public/book/chess/preview/preview_basic_tactic_chess.jpg" style="width: 24rem; height: 33rem;">
+                    </div>
+                    <div class="row">
+                        <div class="col-4 ms-1"></div>
+                        <div class="col">
+                            <button type="button" class="btn btn-danger mt-2" onclick="OpenBook1()">⌕ watch</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row mt-2 bg-dark p-2">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="row mt-2">
+                        <img src="../../public/book/chess/preview/preview_x-ray_attack.jpg" style="width: 24rem; height: 33rem;">
+                    </div>
+                    <div class="row">
+                        <div class="col-4 ms-1"></div>
+                        <div class="col">
+                            <button type="button" class="btn btn-danger mt-2" onclick="OpenBook2()">⌕ watch</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        //getting logo photo
+        var logo = document.createElement('img');
+        logo.src = '../../public/image/logo.jpg';
+        logo.width = 50;
+        logo.height = 50;
+        document.getElementById("logo").appendChild(logo);
+
+
+        //getting another page
+        // document.getElementById("home").addEventListener("click", function() {
+        //     window.location.href = "view/home.html";
+        // });
+
+        //for book2
+        function OpenBook1() {
+            var book1 = '/public/book/chess/book/basic_tactic_chess.pdf';
+            window.open(book1);
+        }
+
+        function OpenBook2() {
+            var book2 = '../../public/book/chess/book/chess_x-ray_attack.pdf';
+            window.open(book2);
+        }
+
+
+    </script>
+</body>
+
+</html>3

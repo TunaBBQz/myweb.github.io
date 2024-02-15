@@ -8,141 +8,78 @@
     <script async src="public/js/javascript-bundle.js"></script>
     <title>MFU Board game club</title>
 
+    <style>
+    </style>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
-        <div class="container-fluid">
-            <div id="logo"></div>
-            <a class="navbar-brand ms-2" href="#">MFU Board game club (หมากรุกสากล)</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav me-auto"></ul>
-                <div class="d-flex">
-                    <div class="dropdown">
-                        <button type="button" style="width: 10rem;" class="btn btn-dark dropdown-toggle"
-                            data-bs-toggle="dropdown">
-                            เปลียนหมาก ↻
-                        </button>
-                        <ul class="dropdown-menu bg-dark">
-                            <li><a class="dropdown-item text-white" href="#">หมากรุกไทย</a></li>
-                            <li><a class="dropdown-item text-white" href="#">หมากรุกสากล</a></li>
-                            <li><a class="dropdown-item text-white" href="#">หมากล้อม</a></li>
-                            <li><a class="dropdown-item text-white" href="#">คลอสเวร์ด</a></li>
-                            <li><a class="dropdown-item text-white" href="#">เอแมท</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <nav class="navbar navbar-expand-sm bg-dark">
-        <div class="container-fluid bg-dark">
-            <!-- Links -->
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <button type="button" class="btn btn-danger" style="width: 7rem;">Home</button>
-                </li>
-            </ul>
 
-            <div class="d-flex">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item ms-2">
-                        <button type="button" class="btn btn-danger" style="width: 7rem;">Guide Book</button>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <button type="button" class="btn btn-danger" style="width: 7rem;">Puzzle+</button>
-                    </li>
-                </ul>
+    <!--for smallest size-->
+    <div class="container-fluid bg-danger text-center">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 mt-2">
+                <h3 class="text-white">Choice one for your experience!</h3>
             </div>
+            <div class="col-2"></div>
         </div>
-    </nav>
-    <div class="container text-white mt-3 pt-2 ps-2 p-2">
-        <div class="col">
-            <div class="row mt-2 bg-dark p-2">
-                <div class="col-2 text-center">
-                    <img src="public/book/chess/preview/preview_basic_tactic_chess.jpg"
-                        style="width: 5rem; height: 7rem;">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 ">
+                <div class="row">
+                    <button type="button" class="btn btn-dark mt-2 mb-2" 
+                    style="padding: 50px; " id="mobile">
+                    <div class="col">
+                        <div class="row-2">
+                            <h2 style="font-size: 5rem;">📱</h2>
+                        </div>
+                        <div class="row-2">
+                            <p>Mobile Visitor</p>
+                        </div>
+                    </div>
+                    </button>
                 </div>
-                <div class="col-8">
-                    <div class="card bg-danger text-center mt-2" style="height: 2rem;">
-                        <p class="text-white ms-3">BASIC CHESS TACTIC: tactic เบื้องต้น จาก รุ่นพี่</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">
-                            <button type="button" class="btn btn-danger mt-2" onclick="OpenBook1()">⌕</button>
-                        </div>
-                        <div class="col-11">
-                            <p class="p-2">เป็นหนังสือที่รุ่นพี่เขียนทิ้งใว้ให้รุ่นน้องได้ใช้ฝึกซ้อม เกี่ยวกับ tatic เบื้องต้น
-                                จาก ประสบการณ์ของรุ่นพี่
-                            </p>
-                        </div>
-                    </div>
-                    
+                <div class="row">
+                    <h5 class="text-white">Or</h5>
                 </div>
-            </div>
-            <div class="row mt-2 bg-dark p-2">
-                <div class="col-2 text-center">
-                    <img src="public/book/chess/preview/preview_x-ray_attack.jpg" style="width: 5rem; height: 7rem;">
+                <div class="row">
+                    <button type="button" class="btn btn-dark mt-2 mb-2" 
+                    style="padding: 50px;" id="pc">
+                    <div class="col">
+                        <div class="row-2">
+                            <h2 style="font-size: 5rem;">💻</h2>
+                        </div>
+                        <div class="row-2">
+                            <p>PC Visitor</p>
+                        </div>
+                    </div>
+                    </button>
                 </div>
-                <div class="col-8">
-                    <div class="card bg-danger text-center mt-2" style="height: 2rem;">
-                        <p class="text-white ms-3">BASIC CHESS TACTIC: X-ray Attack จาก รุ่นพี่</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">
-                            <button type="button" class="btn btn-danger mt-2" onclick="OpenBook2()">⌕</button>
-                        </div>
-                        <div class="col-11">
-                            <p class="p-2">เป็นหนังสือที่รุ่นพี่เขียนทิ้งใว้ให้รุ่นน้องได้ใช้ฝึกซ้อม เกี่ยวกับ chess
-                                x-ray attack tactic</p>
+                <div class="row mt-5">
+                    <div class="row mt-5">
+                        <div class="row mt-5">
+                            <div class="row mt-5">
+                                <div class="row mt-5">
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
+            <div class="col-3"></div>
         </div>
     </div>
-
+    <!-- end -->
     <script>
 
-        //getting logo photo
-        var logo = document.createElement('img');
-        logo.src = 'public/image/logo.jpg';
-        logo.width = 50;
-        logo.height = 50;
-        document.getElementById("logo").appendChild(logo);
+        document.getElementById("pc").addEventListener("click", function() {
+            window.location.href = "view/large_version/home.html";
+        });
 
-
-        //getting another page
-        // document.getElementById("home").addEventListener("click", function() {
-        //     window.location.href = "view/home.html";
-        // });
-
-        //for book1
-        var b1 = document.createElement('img');
-        b1.src = 'public/book/chess/preview/preview_basic_tactic_chess.jpg';
-        document.getElementById("b1").appendChild(b1);
-
-        //for book2
-        var b2 = document.createElement('img');
-        b2.src = 'public/book/chess/preview/preview_x-ray_attack.jpg';
-        document.getElementById("b2").appendChild(b2);
-
-
-        //for book2
-        function OpenBook1() {
-            var book2 = 'public/book/chess/book/basic_tactic_chess.pdf';
-            window.open(book2);
-        }
-
-        function OpenBook2() {
-            var book1 = 'public/book/chess/book/chess_x-ray_attack.pdf';
-            window.open(book1);
-        }
-
+        document.getElementById("mobile").addEventListener("click", function() {
+            window.location.href = "view/small_version/home.html";
+        });
 
     </script>
 </body>

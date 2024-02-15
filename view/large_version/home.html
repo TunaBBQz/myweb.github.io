@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" async href="../../public/css/bootstrap.css">
+    <script async src="../../public/js/javascript-bundle.js"></script>
+    <title>MFU Board game club</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
+        <div class="container-fluid">
+            <div id="logo"></div>
+            <a class="navbar-brand ms-2" href="#">MFU Board game club (Home)</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto"></ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <div class="container-fluid bg-dark">
+            <!-- Links -->
+            <ul class="navbar-nav me-auto">
+            </ul>
+
+            <div class="d-flex">
+                <ul class="navbar-nav me-auto">
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid bg-dark">
+        <div class="row">
+            <div class="col-3">
+            </div>
+            <div class="col-6">
+                <div class="card bg-danger text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row-1 bg-danger mt-2"></div>
+                            <div class="row-1">
+                                <button type="button" class="btn btn-dark" style="font-size: 1rem;"
+                                id="chess">
+                                    <img src="../../public/image/chessicon.png" class="rounded-circle" width="50px">
+                                    <p style="font-size: 15px;">หมากรุกสากล</p>
+                                </button>
+                            </div>
+                            <div class="row-1 bg-dark"></div>
+                        </div>
+                        <div class="col">
+                            <div class="row-1 bg-danger mt-2"></div>
+                            <div class="row-1">
+                                <button type="button" class="btn btn-dark" style="font-size: 1rem;">
+                                    <img src="../../public/image/makrukicon.png" class="rounded-circle" width="50px">
+                                    <p>หมากรุกไทย</p>
+                                </button>
+                            </div>
+                            <div class="row-1 bg-dark"></div>
+                        </div>
+                        <div class="col">
+                            <div class="row-1 bg-danger mt-2"></div>
+                            <div class="row-1">
+                                <button type="button" class="btn btn-dark" style="font-size: 1rem;">
+                                    <img src="../../public/image/goicon.png" class="rounded-circle" width="50px">
+                                    <div>
+                                        <a class="text-dark">_</a><a >หมากล้อม</a><a class="text-dark">_</a>
+                                    </div>
+                                    <p></p>
+                                </button>
+                            </div>
+                            <div class="row-1 bg-dark"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row-1 bg-danger mt-2"></div>
+                            <div class="row-1">
+                                <button type="button" class="btn btn-dark" style="font-size: 1rem;">
+                                    <img src="../../public/image/crosswordicon.png" class="rounded-circle" width="50px">
+                                    <div>
+                                        <a class="text-dark">_</a><a >ครอสเวร์ด</a><a class="text-dark">_-</a>
+                                    </div>
+                                    <p></p>
+                                </button>
+                            </div>
+                            <div class="row-1 bg-dark mt-2"></div>
+                        </div>
+                        <div class="col">
+                            <div class="row-1 bg-danger mt-2"></div>
+                            <div class="row-1">
+                                <button type="button" class="btn btn-dark" style="font-size: 1rem;">
+                                    <img src="../../public/image/amathicon.png" class="rounded-circle" width="50px">
+                                    <div>
+                                        <a class="text-dark">__-</a><a >เอแมท</a><a class="text-dark">___</a>
+                                    </div>
+                                    <p></p>
+                                </button>
+                            </div>
+                            <div class="row-1 bg-dark mt-2"></div>
+                        </div>
+                        <div class="col">
+                            <div class="row-1 bg-danger mt-2"></div>
+                            <div class="row-1">
+                                <!-- empty -->
+                            </div>
+                            <div class="row-1 bg-dark mt-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+        <div class="row mt-5"></div>
+    </div>
+
+    <script>
+
+        //getting logo photo
+        var logo = document.createElement('img');
+        logo.src = '../../public/image/logo.jpg';
+        logo.width = 50;
+        logo.height = 50;
+        document.getElementById("logo").appendChild(logo);
+
+
+        //getting another page
+        document.getElementById("chess").addEventListener("click", function() {
+            window.location.href = "chess.html";
+        });
+
+        //for book1
+        var b1 = document.createElement('img');
+        b1.src = 'public/book/chess/preview/preview_basic_tactic_chess.jpg';
+        document.getElementById("b1").appendChild(b1);
+
+        //for book2
+        var b2 = document.createElement('img');
+        b2.src = 'public/book/chess/preview/preview_x-ray_attack.jpg';
+        document.getElementById("b2").appendChild(b2);
+
+
+        //for book2
+        function OpenBook1() {
+            var book2 = 'public/book/chess/book/basic_tactic_chess.pdf';
+            window.open(book2);
+        }
+
+        function OpenBook2() {
+            var book1 = 'public/book/chess/book/chess_x-ray_attack.pdf';
+            window.open(book1);
+        }
+
+
+    </script>
+</body>
+
+</html>
